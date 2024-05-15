@@ -4,11 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        #pic{
+            width: 100px;
+            height: 100px;
+            background-color: aquamarine;
+            text-align: center;
+            margin-top: 10px;
+        }
+    </style>
 </head>
 <body>
 
     
-    <script>
+    <!-- <script>
         // Function Declare
         function SumFunction(){
             //alert("hello");
@@ -24,8 +33,29 @@
 
     </script>
 <div style="background-color: aqua;"></div>
-    <button onclick="SumFunction();">Click Here</button>
+    <button onclick="SumFunction();">Click Here</button> -->
 
-</div>
+    <div>
+        <p id="pic">show here</p>
+    </div>
+
+    <script>
+        function NameFunction(){
+            let a = prompt("Enter your Sure Name", " ");
+            let b = prompt("Enter your Given Name", " ")
+            let c = a + " " + b;
+
+          // alert("This is your name: " + c);
+           document.getElementById("pic").innerHTML = c;
+        }
+
+      // NameFunction();
+        
+    </script>
+
+       
+
+    <button onclick="NameFunction();">Click Here</button>
+    
 </body>
 </html>
