@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #result{
+            width: 200px;
+            height: 200px;
+            background-color: antiquewhite;
+            color: red;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+
+    <div id="result">Sum will be shown here</div>
+    <script>
+
+        function Sum(){
+        let x = 2, y = 4 , z = 6;
+         let a = x + y;
+        // alert(a);
+       // document.write(a);
+       document.getElementById("result").innerHTML = a;
+
+        }
+    </script>
+
+    <button onclick="Sum()">cLICK hERE</button>
+</body>
+</html>
