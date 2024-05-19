@@ -7,14 +7,33 @@
 </head>
 <body>
     <script>
-        function PrimeNumber(){
+        function Prime(){
+            let num = prompt("Enter the Number", " ");
+            if( num == 1 ){
+                return num + "Is not a prime number";
+            }
 
-            let num = prompt("Enter the number", " ")
+            else if( num == 2 ){
+                return num + "is a prime number ";
+            }
+
+            else {
+                for( x=2 ; x < num; x++) {
+                    if( num % x ==0 ) {
+                        return num + "is not a prime number"
+                    }
+                    
+                }
+                return num + "is a prime number"
+            }
+
+            
             
         }
-        
+        document.write(Prime());
     </script>
+       
 
-    <button onclick="PrimeNumbe()">Click Here</button>
+            
 </body>
 </html>
