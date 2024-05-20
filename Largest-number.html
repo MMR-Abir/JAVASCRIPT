@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="result"></div>
+    <script>
+        function MaxMin(){
+            let a = prompt ("Enter the number", " ");
+            let b = prompt("Enter the number", " ");
+            let c = prompt("Enter the number", " ");
+
+            a = parseInt(a);
+            b = parseInt(b);
+
+            if(a>b && a>c){
+                document.getElementById("result").innerHTML = a ;
+            }
+
+            else if(b>a && b>c){
+                document.getElementById("result").innerHTML = b ;
+            }
+            else{
+                document.getElementById("result").innerHTML = c ;
+            }
+        }
+        
+    </script>
+
+    <button onclick="MaxMin()">Click Here</button>
+</body>
+</html>

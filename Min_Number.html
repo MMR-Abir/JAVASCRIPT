@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Min Number</title>
+</head>
+<body>
+    <script>
+        let numbers = [
+                3,
+                7,
+                10,
+                8,
+                5
+        ];
+
+
+        let min = numbers[0];
+
+        for( i = 1 ; i < numbers.length; i++ ){
+            if (numbers[i] < min ){
+                min = numbers[i];
+            }
+        }
+
+        document.write(min);
+    </script>
+</body>
+</html>
