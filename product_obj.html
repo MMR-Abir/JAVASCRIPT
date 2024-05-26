@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id = "lol"></p>
+    <script>
+        const product = {
+            name : "Iphone",
+            price : 33000,
+            details :"lorem ipsam",
+            weight : "350gm",
+
+
+
+            // [if we want to call funcation inside the product variable] 
+
+
+
+            info : function() {
+                let text = "";
+                text += "Product Name : " + this.name + "<br>"
+                text += "Product Price : " + this.price + "<br>"         
+                text += "Product Details : " + this.details + "<br>"
+                text += "Product Weight : " + this.weight + "<br>"
+
+                return text ;
+
+
+        }
+
+        // console.log(product);
+
+        // product.info = function() {
+        //         let text = "";
+        //         text += "Product Name : " + this.name + "<br>"
+        //         text += "Product Price : " + this.price + "<br>"     [if we want to call function outside product variable ]  
+        //         text += "Product Details : " + this.details + "<br>"
+        //         text += "Product Weight : " + this.weight + "<br>"
+
+        //         return text ;
+
+        }
+        document.write(product.info());
+        // document.getElementById("lol").innerHTML = (product.info());
+    </script>
+</body>
+</html>
