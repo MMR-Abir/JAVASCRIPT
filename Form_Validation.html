@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form -Validation</title>
+</head>
+<body>
+    <!-- <form action="" name="myform" onsubmit="FullName()">
+        <input type="text" name="fname" placeholder="Enter your first name"> <br>
+        <input type="text" name="lname" placeholder="Enter your last name"> <br>
+        <input type="submit" name="button" value="submit">
+
+    </form>
+
+    <script>
+        function FullName(){
+            //let fname = document.forms['myform']['fname'].value ;
+            let lname = document.myform.lname.value;
+            alert(lname);
+            return false ;
+        } -->
+    <!-- </script> -->
+
+
+<!-- <div id="lol"></div>
+
+    <form action="" name="myform">
+        <input type="text" name="fname" placeholder="Enter your first name"> <br>
+        <input type="text" name="lname" placeholder="Enter your last name"> <br>
+        <input type="button" onclick="FullName()"  name="submit" value="submit">
+
+    </form>
+
+    <script>
+        function FullName(){
+           // let fname = document.forms['myform']['fname'].value ;
+            let fname = document.myform.fname.value;
+            let lname = document.myform.lname.value;
+            let fullname = fname + " " + lname ;
+            //alert(fname);
+            // alert(fullname);
+            // return false ;
+
+            document.getElementById("lol").innerHTML = fullname ;
+        }
+        </script> -->
+
+
+        <form action="" name="myform">
+            <!-- <input type="text" name="fname" placeholder="Enter your first name"> <br>
+            <input type="text" name="lname" placeholder="Enter your last name"> <br> -->
+            <input type="text" name="email" placeholder="Enter your email"> <br>
+            <input type="text" name="confirm_email" placeholder="Enter your con email"> <br>
+            <input type="button" onclick="validate()"  name="submit" value="submit">
+    
+        </form>
+
+
+        <script>
+            function validate(){
+                let email1 = document.myform.email.value;
+                let email2 = document.myform.confirm_email.value;
+                let pattern =/[A-z0-9]+@[A-z]+\.[A-z]/;
+                let result = email1.search(pattern);
+                //alert(result);
+                if(result == -1){
+                    alert("Not Valid");
+                }
+
+                else if(email1 !== email2){
+                    alert("Not Matched");
+                } else{
+                    alert("Valid")
+                }
+            }
+        </script> 
+<!-- <div id="lol"></div> -->
+
+         <!-- <form action="" name="myform">
+            <input type="text" name="fname" placeholder="Enter your first name"> <br>
+            <input type="text" name="lname" placeholder="Enter your last name"> <br>
+            <input type="text" name="email" placeholder="Enter your email"> <br>
+            <input type="text" name="confirm_email" placeholder="Enter your con email"> <br>
+            <input type="password" name="password" placeholder="Enter password"> <br>
+            <input type="button" onclick="validate()"  name="submit" value="submit">
+    
+        </form>
+
+
+         <script>
+            function validate(){
+                let email1 = document.forms.myform.email.value;
+                let email2 = document.forms.myform.confirm_email.value;
+                // let pass = document.myform.password.value;
+               // let pattern =/[a-z0-9] + @ [a-z] +\. [a-z]/ ;
+               let pattern = /[a-z0-9] + @ [a-z] +\. [a-z]/;
+                let result =email1.search(pattern);
+                //alert(result);
+                if(result == -1){
+                    alert("Not Valid")
+                }
+
+                else if(email1 !== email2){
+                    alert("Not Matched")
+                    
+                }
+                //  else if( pass.length < 7 ){
+                //     alert("not valid")
+                // }
+                
+                else{
+                    alert("Valid")
+                }
+            }
+        </script>  -->
+</body>
+</html>

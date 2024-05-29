@@ -6,15 +6,37 @@
     <title>Even or Odd</title>
 </head>
 <body>
-    <script>
-        let x = prompt("Enter the number", " ")
 
-        if ( x % 2== 0) {
-            alert(x + "  "+ "the number is even")
-                          }
-        else {
-            alert(x +  "the number is odd")
-        }
+    <p id="kk"></p>
+    <script>
+        // let x = prompt("Enter the number", " ")
+
+        // if ( x % 2 == 0) {
+        //     alert( x + "  "+ " is an even number")
+        //                   }
+        // else {
+        //     alert( x +  " is an  odd number")
+        // }
+
+
+
+            function Odd_Even(){
+                let x = prompt("Enter the number", " ")
+
+               if ( x % 2 == 0) {
+                    // alert( x + "  "+ " is an even number")
+                    return x + " is an even number"
+                                }
+                 else {
+                   // alert( x +  " is an  odd number")
+                   return x + " is an even number"
+                      }
+                     // document.getElementById("kk").innerHTML = x ;
+                             }
+      
+                            document.write(Odd_Even()) ;
     </script>
+
+    <!-- <button onclick="Odd_Even(kk)">Click here</button> -->
 </body>
 </html>
