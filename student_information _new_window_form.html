@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <!-- <form action="" name="myforms">
+        Student ID ;
+        ;
+        <input type="text" name="student_id" placeholder="Enter your id"> <br>
+        <input type="text" name="student_name" placeholder="Enter your name"> <br>
+        <input type="text" name="course" placeholder="Enter your course name"> <br>
+        <input type="text" name="year_section" placeholder="Enter your year_section"> <br>
+        <button onclick="NewWindow()">Click Here</button>
+     </form>
+
+
+     <script>
+        function NewWindow(){
+            let StudentName = document.myforms.student_id.value;
+            let StudentID = document.myforms.student_name.value;
+            let cOURSE = document.myforms.course.value;
+            let Section = document.myforms.year_section.value;
+
+            let mywindow = window.open("","abc" , "width=800", "height=600");
+            mywindow.document.write("student Information <br>");
+            mywindow.document.write(StudentName + "<br>" + StudentID + "<br>" + cOURSE + "<br>" + Section  );
+        }
+     </script> -->
+
+
+     <form action="" name="myforms">
+        Student ID :
+        <input type="text" name="student_id" placeholder="Enter your id"> <br> <br>
+        Student Name:
+        <input type="text" name="student_name" placeholder="Enter your name"> <br> <br>
+        Course Name:
+        <input type="text" name="course" placeholder="Enter your course name"> <br> <br>
+        Year/Section:
+        <input type="text" name="year_section" placeholder="Enter your year_section"> <br> <br>
+        <button type="button" onclick="NewWindow()">Click Here</button>
+     </form>
+
+
+     <script>
+        function NewWindow(){
+            let StudentName = document.myforms.student_id.value;
+            let StudentID = document.myforms.student_name.value;
+            let cOURSE = document.myforms.course.value;
+            let Section = document.myforms.year_section.value;
+
+            let mywindow = window.open("","abc" , "width=800", "height=600");
+            mywindow.document.write("student Information <br>");
+            mywindow.document.write(StudentName + "<br>" + StudentID + "<br>" + cOURSE + "<br>" + Section  );
+        }
+     </script>
+     
+
+
+</body>
+</html>

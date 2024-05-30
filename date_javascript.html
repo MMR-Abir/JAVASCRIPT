@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <form action="" name="Fond">
+        <input type="date" name="Date">
+        <button type="button" onclick="MyDate()">show</button>
+     </form>
+
+     <script>
+        function MyDate(){
+            let dATE = document.Fond.Date.value;
+           
+         //  let j = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+        
+
+           let da = new Date(dATE); 
+          //alert(da.getDate()) 
+          
+          let j = (da.getDay())
+          if( j == 0){
+              alert ("sunday") ;
+          } else if(j == 1){
+            alert ("Monday") ;
+          } else if(j == 2){
+            alert ("Tuesday") ;
+          } else if(j == 3){
+            alert ("Wednesday") ;
+        }  else if(j == 4){
+            alert ("Thursday") ;
+        }  else if(j == 5){
+            alert ("Friday") ;
+        } else{
+            alert ("Saturday") ;
+        }
+         // alert(j);
+          // alert(da)
+          // alert(dATE);
+         // alert(date.getDate());
+        // alert(date.getDay())
+         
+        //   let days ="";
+        //   alert(days[da.getDay()])
+         
+          
+        
+       
+
+
+        }
+     </script>
+
+     
+</body>
+</html>

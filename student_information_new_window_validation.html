@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" name="myforms">
+        <input type="text" name="student_id" placeholder="Enter your id"> <br>
+        <input type="text" name="student_name" placeholder="Enter your name"> <br>
+        <input type="text" name="course" placeholder="Enter your course name"> <br>
+        <input type="text" name="year_section" placeholder="Enter your year_section"> <br>
+        <button type="button" onclick="NewWindow()" value="submit">Click Here</button>  <br> <br> <br>
+
+
+
+
+
+
+
+
+        we use type:button when we don't want to submit information for it's false information and it can not be refreash automatically.And the written information will be shown there.. 
+
+        But when we use type:submit ,it can be automatically refreash and submitted even if you input any wrong information..
+
+        
+     </form>
+
+
+     <script>
+        function NewWindow(){
+            let StudentID = document.myforms.student_id.value;
+            let StudentName = document.myforms.student_name.value;
+            let cOURSE = document.myforms.course.value;
+            let Section = document.myforms.year_section.value;
+
+            if(StudentID ==""){
+                alert("Must be enter your ID ");
+
+            } else if(StudentName ==""){
+                alert("Must be enter your Name");
+            } else if(cOURSE ==""){
+                alert("Must be enter your Course Name");
+            } else if(Section ==""){
+                alert("Must be enter your Section");
+            } else {
+                let mywindow = window.open("","abc" , "width=800", "height=600");
+            mywindow.document.write("student Information <br>");
+            mywindow.document.write(StudentID + "<br>" + StudentName + "<br>" + cOURSE + "<br>" + Section  );
+            }
+
+
+
+
+           
+        }
+     </script>
+</body>
+</html>
