@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" name="Naruto">
+        Name :
+        <input type="text" name="Eren" placeholder="Enter your name" > <br>
+        Contact :
+        <input type="number" name="Mikasa" placeholder="Enter your phone number" > <br>
+        Remarks : <br>
+        <textarea name="Levi" placeholder="write your comment" ></textarea> <br>
+        Sex :
+        <input type="radio" name="Sasha" value="Male"> Male
+        <input type="radio" name="Sasha" value="Female"> Female <br>
+        Courses :
+        <input type="checkbox" class="Saske" value="NT"> NT
+        <input type="checkbox" class="Saske" value="LAD"> LAD
+        <input type="checkbox" class="Saske" value="DDD" > DDD
+        <input type="checkbox" class="Saske" value="ESAD"> ESAD <br>
+
+
+        Location :
+        <select name="Shikamaru">
+            <option>Select One</option>
+            <option>Banani</option>
+            <option>Dhanmondi</option>
+            <option>Mirpur</option>
+            <option>Panthpath</option>
+        </select> <br> <br>
+
+        <button type="button" name="submit" onclick="UloveI()">Click Here</button>
+
+
+    </form>
+    
+    <script>
+        function UloveI(){
+            let FName = document.Naruto.Eren.value;
+           // alert(FName);
+            let Fcontact = document.Naruto.Mikasa.value;
+            let Information = document.Naruto.Levi.value;
+            let Gender = document.Naruto.Sasha.value;
+            // alert(Gender);
+            let Topics = document.Naruto.Saske.value;
+            let Places = document.Naruto.Shikamaru.value;
+           // alert(Places);
+           
+
+
+           let output ="<h1>tRANEES iNFORMATION </h1>" 
+           output += "Name: " + FName + "<br>" ;
+           output += "Contact: " + Fcontact + "<br>" ;
+           output += "Gender: " + Information + "<br>" ;
+           output += "Sex: " + Gender + "<br>" ;
+           output += "Courses: " + Topics + "<br>" ;
+           output += "Location: " + Places + "<br>" ;
+
+            let Luffy = window.open("","","width = 400","height=250");
+            Luffy.document.write(output);
+        }
+    </script>
+</body>
+</html>
