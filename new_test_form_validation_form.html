@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Window Form Validation </title>
+</head>
+<body>
+    <h2>Billing Information</h2>
+    <form action="" name="WindBreaker">
+        First Name : <br>
+        <input type="text" name="Fname" placeholder="Write your first name"> <br>
+
+        Last Name : <br>
+        <input type="text" name="Lname" placeholder="Write your last name"> <br>
+
+        Gender : <br>
+        <input type="radio" name="gender" value="Male">Male
+        <input type="radio" name="gender" value="Female">Female <br>
+
+        Language : <br>
+        <input type="checkbox" name="oo" class="Titan" value="Bangla">Bangla <br>
+        <input type="checkbox" name="oo" class="Titan" value="English">English <br>
+        <input type="checkbox" name="oo" class="Titan" value="German">German <br>
+
+
+        Email : <br>
+        <input type="email" name="Mail" placeholder="Write your email"> <br>
+
+        Address : <br>
+        <textarea name="INFO" placeholder="wRITE ANYTHING"></textarea> <br>
+
+        State : <br>
+        <select name="Division">
+            <option>Select One</option>
+            <option>Dhaka</option>
+            <option>Rajshahi</option>
+            <option>Cumilla</option>
+            <option>Khulna</option> 
+        </select> <br>
+
+        Zip : <br>
+        <input type="number" name="Code"> <br>
+
+
+        Credit Card Type : <br>
+        <select name="Card">
+            <option>Select One</option>
+            <option>Master Card</option>
+            <option>Visa Card</option>
+            <option>Paypal</option>
+            <option>American Card</option> 
+        </select> <br> <br>
+
+
+
+        <button type="button" onclick="AOT()"> Click Here</button>
+
+    </form> 
+
+
+    <script>
+        function AOT(){
+            let GivenName = document.WindBreaker.Fname.value;
+            let SurName = document.WindBreaker.Lname.value;
+            let Sex = document.WindBreaker.gender.value;
+            // let Communication = document.WindBreaker.oo.value;
+            let Communication = document.getElementsByClassName("Titan")
+            let native = "" ;
+            for( i = 0; i < Communication.length ; i++ ){
+                if(Communication[i].checked){
+                    native += Communication[i].value + ", "
+                }
+            }
+
+            let Send = document.WindBreaker.Mail.value;
+            let Information = document.WindBreaker.INFO.value;
+            let Places = document.WindBreaker.Division.value;
+            let OTP = document.WindBreaker.Code.value;
+            let Money=document.WindBreaker.Card.value;
+
+            let Naruto = window.open("","","width=500","height=500")
+
+            let output = "" ;
+            output += "<h1> Personal Information </h1>"
+            output += "First Name: " + GivenName + "<br>" ;
+            output += "Last Name: " + SurName + "<br>" ;
+            output += "Gender: " + Sex + "<br>" ;
+            // output += "Language: " + Communication + "<br>" ;
+            output += "Language: " + native + "<br>" ;
+            output += "Email: " + Send + "<br>" ;
+            output += "Address: " + Information + "<br>" ;
+            output += "State: " + Places + "<br>" ;
+            output += "Zip: " + OTP + "<br>" ;
+            output += "Credit Card Type: " + Money + "<br>" ;
+
+            Naruto.document.write(output);
+
+        }
+    </script>
+</body>
+</html>

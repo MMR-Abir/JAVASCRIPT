@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" name="OnePiece">
+        GivenName : <br>
+        <input type="text" name="Fname" placeholder="Write your first Name"> <br>
+
+        SurName : <br>
+        <input type="text" name="Lname" placeholder="Write your first Name" > <br>
+
+        Email : <br>
+        <input type="email" name="Mail" placeholder="Enter Email"> <br>
+
+        Confirm Email : <br>
+        <input type="email" name="ExactMail" placeholder="Enter Mail Again"> <br>
+
+        Password : <br>
+        <input type="password" name="Code" placeholder="Enter Password"> <br>
+
+        <button type="button" onclick="WhiteBeard()">Click Here</button>
+    </form>
+
+    <script>
+        function WhiteBeard(){
+            let FirstName = document.OnePiece.Fname.value;
+            let LastName = document.OnePiece.Lname.value;
+            let Gmail = document.OnePiece.Mail.value;
+            let ConfirmEmail = document.OnePiece.ExactMail.value;
+            let PinCode = document.OnePiece.Code.value;
+            let rules = (/^[A-Za-z]+$/);
+            let rules1 = (/[a-z0-9]+@[a-z]+\.[a-z]/);
+            let rules2 = (/[0-9]/);
+            let result = FirstName.search(rules);
+            let result4 = LastName.search(rules);
+            let result2 = Gmail.search(rules1);
+            let result3 = PinCode.search(rules2);
+
+            if( result == -1 ){
+                alert("Not Valid");
+            }
+
+            else if( result4 == -1){
+                alert("Not Valid");
+            }
+
+            else if(result2 == -1){
+                alert("Not Valid");
+            }
+
+            else if(Gmail != ConfirmEmail){
+                alert("Not Matched")
+            }
+
+            else if( result3 == -1 ){
+                alert("Not Valid")
+            }
+
+            else{
+                alert("Valid")
+            }
+        }
+    </script>
+</body>
+</html>

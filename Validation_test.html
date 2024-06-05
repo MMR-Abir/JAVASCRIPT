@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valiadtion Form by useing Array</title>
+</head>
+<body>
+    <form action="" name="DemonSlayer">
+        Email : <br>
+        <input type="email" name="email" placeholder="Enter your Email"> <br>
+        Confirm Email : <br>
+        <input type="email" name="confirmMail" placeholder="Rewrite Email"> <br>
+
+        Password : <br>
+        <input type="password" name="Code" placeholder="Input your password"> <br>
+
+        <button type="button" name="submit" onclick="Bolder()">Click Here</button>
+    </form>
+
+
+    <script>
+            let  Bolder = () => {
+            let Mail =document.DemonSlayer.email.value;
+            let ConfirmMail =document.DemonSlayer.confirmMail.value;
+            let OTP =document.DemonSlayer.Code.value;
+            let pattern =/[a-z0-9]+@[a-z]+\.[a-z]/;
+            let pattern1 = /[0-9]/;
+            let confirm = Mail.search(pattern);
+            let confirm1 = OTP.search(pattern1);
+
+            if(confirm == -1){
+                alert("Not Valid") ;
+
+            } 
+            else if(Mail !== ConfirmMail ){
+                alert("Not Matched")
+            }
+            else if(confirm1 == -1){
+                alert("Not Valid");
+            }
+
+            else {
+                alert("Valid");
+            }
+
+            let output = "Mail Information" + "<br>" ;
+            output += "Email: " + Mail + "<br>" ;
+            output += "Confirm Email: " + ConfirmMail + "<br>" ;
+            output += "Password: " + OTP + "<br>" ;
+
+            document.write(output);
+            
+        }
+
+        
+
+
+
+
+
+
+    </script>
+</body>
+</html>

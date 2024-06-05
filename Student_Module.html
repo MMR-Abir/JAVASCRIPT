@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Module</title>
+</head>
+<body>
+    <p id="demo"> </p>
+    <script type="module">
+        import Student_Info, {Country, District} from "./Student.js" ;
+        let output = Student_Info();
+        output += `<br> Country : ${Country} <br> District : ${District}`  ;
+        // document.getElementById("demo").innerHTML = Student_Info();
+        document.getElementById("demo").innerHTML = output;
+
+
+    </script>
+</body>
+</html>

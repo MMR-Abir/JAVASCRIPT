@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class Methods</title>
+</head>
+<body>
+    <h1> Student Information </h1>
+    <p id="demo"></p>
+    <script>
+        class Student{
+            constructor (name ,dob ,email,address){
+                this.fname = name ;
+                this.birth = dob ;
+                this.mail = email;
+                this.Information = address ;
+            }
+
+            info(){
+                let details ="" ;
+                details += "Name: " + this.fname + "<br>" ;
+                details += "Dob: " + this.birth + "<br>" ;
+                details += "Email: " + this.mail + "<br>" ;
+                details += "Address: " + this.Information + "<br>" ;
+                return details ;
+            }
+        }
+
+
+        let student = new Student ("Sakib", 2014 ,"abc@gmail.com","Savar");
+        let student1 = new Student ("Rahim", 2015 ,"abc@gmail.com","Dhaka")
+        document.getElementById("demo").innerHTML = student.info() + "<br>" + student1.info();
+
+    </script>
+</body>
+</html>
