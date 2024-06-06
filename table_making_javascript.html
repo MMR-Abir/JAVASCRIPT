@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        table{
+            border: 1px solid greenyellow;
+            border-collapse: collapse;
+            text-align: center;
+        }
+
+        td{
+            border: 1px solid greenyellow;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        let Cartoon = [
+                "Naruto",
+                "One Piece",
+                "Attack On Titan",
+                "Death Note",
+                "Demon Slayer",
+                "Jujutsu Kaisen",
+                "Dragon Ball Z"
+        ] ;
+        let output = "<table>";
+            output += "<tr><td>sn</td><td>Name</td></tr>";
+            
+           
+        
+        for( i = 0; i < Cartoon.length ; i++ ){
+            sn = i + 1; 
+            output += "<tr><td>" + sn + "</td>"
+                output += "<td>" + Cartoon[i] + "</td></tr>"
+            // document.write(Cartoon[i] + "<br>");       
+            
+        }
+
+        output += "</table>";
+        document.write(output);
+
+        
+    </script>
+</body>
+</html>
