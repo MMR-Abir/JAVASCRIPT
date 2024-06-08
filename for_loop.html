@@ -40,11 +40,19 @@
             "Saif"
         ];
 
-        students.sort();
+        let converted = students.toString();
+        let convert = converted.split(",");
 
-        for(i = 0; i<students.length; i++){
+        convert = parseInt(convert);
+
+        // students.sort();
+
+        for(i = 1; i<students.length ; i++ ){
             document.write(students[i] + " ,")
         }
+
+        // alert(typeof(convert));
+        console.log(convert);
     </script>
 </body>
 </html>

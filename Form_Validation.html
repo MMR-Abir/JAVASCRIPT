@@ -55,16 +55,15 @@
             <input type="button" onclick="validate()"  name="submit" value="submit">
     
         </form>
-
-
         <script>
             function validate(){
                 let email1 = document.myform.email.value;
                 let email2 = document.myform.confirm_email.value;
                 let pattern =/[A-z0-9]+@[A-z]+\.[A-z]/;
-                let result = email1.search(pattern);
-                //alert(result);
-                if(result == -1){
+                let result1 = email1.search(pattern);
+       
+            alert(result1);
+                if(result1 == -1){
                     alert("Not Valid");
                 }
 
@@ -93,7 +92,7 @@
                 let email1 = document.forms.myform.email.value;
                 let email2 = document.forms.myform.confirm_email.value;
                 // let pass = document.myform.password.value;
-               // let pattern =/[a-z0-9] + @ [a-z] +\. [a-z]/ ;
+               // let pattern =/[a-z0-9]+@[a-z]+\.[a-z]/;
                let pattern = /[a-z0-9] + @ [a-z] +\. [a-z]/;
                 let result =email1.search(pattern);
                 //alert(result);
