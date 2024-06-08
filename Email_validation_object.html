@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="validation.js"></script>
+</head>
+<body>
+    <form action="" name="Piece">
+        Email : <br>
+        <input type="text" name="GMail" placeholder="Enter your mail"> <br>
+        <input type="button" name="Submit" value="Submit" onclick="CheckMail()">
+
+    </form>
+    <script>
+        function CheckMail(){
+            let Send = document.Piece.GMail.value;
+            let pattern1=/[0-9]/;
+            if(Send ==""){
+                alert("Can't be empty")
+            }
+
+          else  if(Send.search(pattern1) ==0){
+                alert("Can't be number")
+            }
+
+             
+            else{
+                let CreateObj= new Validation(Send);
+            //console.log(CreateObj);
+            CreateObj.validate();
+            }
+        }
+    </script>
+</body>
+</html>

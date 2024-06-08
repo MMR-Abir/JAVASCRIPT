@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Validation</title>
+</head>
+<body>
+
+    <p id="show"></p>
+
+    <form action="action.html" name="Event" onsubmit="return Manage() ">
+        First Name : <br>
+        <input type="text" name="Fname" placeholder="Enter your first name">
+        Last Name :
+        <input type="text" name="Lname" placeholder="Enter your last name"> <br>
+
+        Company : <br>
+        <textarea name="Institute" placeholder="write address" rows="2" cols="25"></textarea> <br>
+
+        Email : <br>
+        <input type="text" name="Mail" placeholder="Enter the mail"> <br>
+
+        Phone Number : <br>
+        <input type="number" name="Number" placeholder="Enter the number"> <br>
+
+        Subject : <br>
+        <select name="Field" id="">
+            <option>Select One</option>
+            <option>Manager</option>
+            <option>Customer Service</option>
+            <option>Event Manager</option>
+            <option>Field Worker</option>
+        </select> <br>
+
+        Are you an existing customer? <br>
+        <input type="radio" name="exit" value="yes"> yes
+        <input type="radio" name="exit" value="no"> yes <br>
+
+        <button type="submit" name="submit" value="Submit">Click Here</button>
+         
+    </form>
+
+
+    <script>
+        function Manage(){
+            let GivenName = document.Event.Fname.value;
+            let SurName = document.Event.Lname.value;
+            let Organization = document.Event.Institute.value;
+            let Gmail = document.Event.Mail.value;
+            let Contact = document.Event.Number.value;
+            // let Field = document.Event.Field.value;
+            let Old = document.Event.exit.value;
+
+            
+            let pattern1 = (/[a-z0-9]+@[a-z]+\.[a-z]/);
+            // let pattern2 = (/[0-9]/);
+            // let result = Gmail.search(pattern1);
+
+            let Errors =[] ;
+            
+
+            if(GivenName ==""){
+                Errors[Errors.length] ="First name can't be empty" ;
+            }
+
+            if(SurName ==""){
+                Errors[Errors.length] ="First name can't be empty" ;
+            }
+
+            if( Organization==""){
+                Errors[Errors.length] ="Organization name can't be empty" ;
+            }
+
+            if( Gmail==""){
+                Errors[Errors.length] ="Gmail can't be blank" ;
+            }
+            else if(Gmail.search(pattern1)== -1){
+                Errors[Errors.length] ="Gmail name can't be acceptable" ;
+            }
+            if( Contact==""){
+                Errors[Errors.length] ="Number field can't be empty" ;
+            }
+            if( Old==""){
+                Errors[Errors.length] ="Field field can't be empty" ;
+            }
+
+            
+            // let ErrorOutput = "<ul>"
+
+            //     for(i = 0 ; i < Errors.length ; i ++ ) {
+            //         ErrorOutput += "<li>" + Errors[i] + "</li>"
+            //     }
+
+            //     ErrorOutput +="</ul>" 
+
+            //     document.getElementById("show").innerHTML = ErrorOutput ;
+                if(Errors.length>0){
+                    let ErrorOutput = "<ul>"
+
+                for(i = 0 ; i < Errors.length ; i ++ ) {
+                    ErrorOutput += "<li>" + Errors[i] + "</li>"
+                    }
+                    ErrorOutput +="</ul>" 
+                    document.getElementById("show").innerHTML = ErrorOutput ;
+                    return false;  
+                } else {
+                   // document.getElementById("show").innerHTML = ""
+                   return true;
+                }
+            
+        }
+    </script>
+</body>
+</html>
