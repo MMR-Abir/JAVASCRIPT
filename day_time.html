@@ -8,15 +8,22 @@
 <body>
     <h1 id="demo"></h1>
 
+    <form action="" name="lol">
+        <!-- <input type="date" name="Date"> -->
+        <button type="button" onclick="myFunction()">show</button>
+    </form>
+
 <script>
 // setInterval(myFunction, 1000);
 
-function myFunction() {
-    let hole =["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"] ;
-    let rate =["January","February","March","April","May","June","July","August","September","October","November","December"];
+ function myFunction() {
+    // let hole =["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"] ;
+    // let rate =["January","February","March","April","May","June","July","August","September","October","November","December"];
+    // let dATE = document.lol.Date.value;
     
+    // let all = new Date(dATE);
      let all = new Date();
-    //  alert(all)                         
+     //alert(all) ;                        
      let H =all.getHours();
      let M =all.getMinutes();
      let S =all.getSeconds();
@@ -28,14 +35,14 @@ function myFunction() {
     
 
      let output = "";
-     output += `Time : ${H} : ${M} : ${S}`;
-     output += `Time : ${D} : ${Month} : ${Y} : ${Days}`
+     output += `Time : ${H} : ${M} : ${S}<br>`;
+      output += `Time : ${D} : ${Month} : ${Y} : ${Days}`;
    
-    
+      document.getElementById("demo").innerHTML =output ;
    
-}
+            }
 
-document.getElementById("demo").innerHTML =output ;
+    
 </script>
 </body>
 </html>
