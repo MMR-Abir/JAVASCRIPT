@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+        <button type="button" onclick="EmailVal()" >Click Here</button>
+
+        <script>
+            class Shisui{
+                constructor (email){
+                    this.mail=email;
+                }
+            
+
+            Itachi(){
+                let rules= /[a-z0-9]+@[a-z]+\.[a-z]/;
+                let rules1 = /[A-z0-9]/;
+                if(this.mail.search(rules) == -1){
+                   // alert(" Fokkinni Email Wrong ken Tor  !") 
+                   return false ;
+                }
+
+                else{
+                   // alert("Valid Email")
+                   return true ;
+                }
+            }
+        }
+            function EmailVal(){
+                let email = prompt("Enter the Email", "") ;
+
+                let LOL = new Shisui(email);
+                if(LOL.Itachi()){
+                    document.getElementById("lol").innerHTML="Valid Email Address"
+                }
+
+                else{
+                    document.getElementById("lol").innerHTML="Invalid Email Address"
+                }
+            }
+
+
+
+        </script>
+
+        <div id="lol"></div>
+    
+</body>
+</html>

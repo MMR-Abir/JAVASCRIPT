@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" name="Demon">
+        Name :
+        <input type="text" name="Full" placeholder="Enter your full Name"> <br>
+
+        Contact :
+        <input type="number" name="Number" placeholder="Enter your Number"> <br>
+
+        Sex :
+        <input type="radio" name="gender" id="male" value="Male">Male
+        <input type="radio" name="gender" id="female" value="Male">Female <br>
+
+        Courses :
+        <input type="checkbox" class="Titan" name="kk" value="NT">NT
+        <input type="checkbox" class="Titan" name="kk" value="LAD">LAD
+        <input type="checkbox" class="Titan" name="kk" value="DDD">DDD
+        <input type="checkbox" class="Titan" name="kk" value="ESAD">ESAD <br>
+
+        Location :
+
+        <select name="Select">
+            <option>Select One</option>
+            <option>Banani</option>
+            <option>Dhanmondi</option>
+            <option>Mirpur</option>
+        </select> <br>
+
+        <button type="button" onclick="Akaga()" name="Submit" value="submit">Click Here </button>
+    </form>
+
+
+
+        <script>
+
+class Shisui{
+    constructor (name,contact,sex,courses,location){
+        this.Fullname = name;
+        this.Connect = contact;
+        this.SEXUAL = sex;
+        this.sUBLECT = courses;
+        this.lOCATE = location;
+    }
+
+    Danzo(){
+        let output = "<h2>Traniee Information</h2>" 
+         output +="Name: " +this.Fullname + "<br>";
+         output +="Number: " +this.Connect + "<br>";
+         output +="Gender: " +this.SEXUAL + "<br>";
+         output +="Courses: " +this.sUBLECT + "<br>";
+         output +="Location: " +this.lOCATE + "<br>";
+         let nw = window.open("","","width=500 ,height=600") ;
+         nw.document.write(output) ;
+
+    }
+}
+
+function Akaga(){
+            let FulName = document.Demon.Full.value ;
+            let Number = document.Demon.Number.value ;
+            let Gender = document.Demon.gender.value ;
+            let Courses = document.getElementsByClassName("Titan") 
+            let native = "" ;
+            for( i = 0; i < Courses.length ; i++ ){
+                if(Courses[i].checked){
+                    native += Courses[i].value + ", "
+                }
+            }
+            let Address = document.Demon.Select.value ;
+
+            let Called = new Shisui(FulName,Number,Gender,native,Address) ;
+            Called.Danzo();
+
+
+
+
+        }
+        </script>
+
+
+
+
+</body>
+</html>
