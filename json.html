@@ -9,16 +9,18 @@
     <p id="demo"></p>
 
 <script>
-let text = '{"employees":[' +
+let text = 
+'{"employees":[' +
 '{"firstName":"John","lastName":"Doe" },' +
 '{"firstName":"Anna","lastName":"Smith" },' +
 '{"firstName":"Peter","lastName":"Jones" }]}';
-alert(typeof text);
+//alert(typeof text);
 
-const obj = JSON.parse(text);
-//alert(typeof obj);
-document.getElementById("demo").innerHTML =
-obj.employees[1].firstName + " " + obj.employees[1].lastName;
+const lol = JSON.parse(text);
+//alert(typeof lol);
+//document.getElementById("demo").innerHTML =
+document.write(lol.employees[1].firstName + " " + lol.employees[1].lastName) ;
+// lol.employees[1].firstName + " " + lol.employees[1].lastName;
 </script>
 </body>
 </html>
