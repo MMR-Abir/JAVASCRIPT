@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student_File_with_Class_Object</title>
+    <!-- <script src="Student_File_with_Class_Object.js"></script> -->
+  </head>
+  <body>
+    <form action="" name="Wind">
+      Full-Name:
+      <input type="text" name="Name" placeholder="Enter your name" /> <br />
+
+      Gender:
+      <input type="radio" name="gender" value="Male" />Male
+      <input type="radio" name="gender" value="Female" />Female <br />
+
+      Address:
+      <textarea name="Locate" placeholder="Write your Address"></textarea>
+      <br />
+
+      Courses:
+      <input type="checkbox" name="DD" class="Titan" value="DD" />DD
+      <input type="checkbox" name="WDPF" class="Titan" value="WDPF" />WDPF
+      <input type="checkbox" name="NTE" class="Titan" value="NTE" />NTE <br />
+
+      Location:
+      <select name="Select">
+        <option>sELECT oNE</option>
+        <option>Uttara</option>
+        <option>BANANI</option>
+        <option>GULSHAN</option>
+        <option>MIRPUR</option>
+      </select>
+      <br />
+
+      <button type="submit" name="submit" onclick="Danzo()">SUBMIT</button>
+    </form>
+
+    <script>
+      class Naruto {
+        constructor(name, gender, area, subject, location) {
+          this.fname = name;
+          this.sex = gender;
+          this.address = area;
+          this.courses = subject;
+          this.places = location;
+        }
+
+        findout() {
+          let output = "";
+          output += "Name: " + this.fname + "<br>";
+          output += "Gender: " + this.sex + "<br>";
+          output += "Address: " + this.address + "<br>";
+          output += "Subjects: " + this.courses + "<br>";
+          output += "Home: " + this.places + "<br>";
+          let lol = window.open("", "", "width=400,height=500");
+          lol.document.write(output);
+        }
+      }
+
+      function Danzo() {
+        let Full = document.Wind.Name.value;
+        let sex = document.Wind.gender.value;
+        let Info = document.Wind.Locate.value;
+        let subject = document.getElementsByClassName("Titan");
+        let native = "";
+        for (i = 0; i < subject.length; i++) {
+          if (subject[i].checked) {
+            native += subject[i].value + ", ";
+          }
+        }
+        let Places = document.Wind.Select.value;
+
+        let shisui = new Naruto(Full, sex, Info, native, Places);
+        shisui.findout();
+    }
+
+    </script>
+  </body>
+</html>

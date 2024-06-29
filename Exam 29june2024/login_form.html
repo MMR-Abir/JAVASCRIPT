@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form Validation</title>
+</head>
+<body>
+    <form action="" name="login">
+        Email: 
+        <input type="text" name="Mail" placeholder="Emter the mail"> <br>
+
+        Password: 
+        <input type="number" name="code" placeholder="Enter the password"> <br>
+
+        <button type="button" name="submit" onclick="lulu()">Login</button>
+    </form>
+
+    <script>
+        class Former{
+            constructor (Mail,Pass){
+                this.email=Mail;
+                this.password =Pass;
+            }
+
+            validate(){
+                //let rules= /[a-z0-9]+@[a-z]\.+[a-z]/;
+                let rules= /[a-z0-9]+@[a-z]+\.[a-z]/;
+
+                 if(this.email ==""){
+                    alert("Email Can't be blank")
+                 }
+                else if(this.email.search(rules)== -1){
+                    alert("Invalid Email")
+                }
+
+                else if(this.password==""){
+                    alert("Password Can't be blank")
+
+                }
+
+                else if(this.password.length < 7){
+                    alert("Use 8 Charature")
+                }
+
+                else{
+                    document.write("Login Successful")
+                }
+            }
+        }
+
+
+        function lulu(){
+            let mail = document.login.Mail.value;
+        let pass = document.login.code.value;
+
+
+        let cot = new Former(mail,pass);
+        cot.validate();
+        }
+    </script>
+</body>
+</html>
