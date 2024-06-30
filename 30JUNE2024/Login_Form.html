@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+</head>
+<body>
+    <form action="" name="Demon">
+        Username: 
+        <input type="text" name="Name" placeholder="Enter your name"> <br>
+
+        Password:
+        <input type="password" name="pass" placeholder="Enter your Password"> <br>
+
+        <button type="button" name="submit" onclick="Itachi()">LOGIN</button>
+    </form>
+
+    <script>
+
+        class Shisui{
+            constructor(name,password){
+                this.fname = name;
+                this.pass = password;
+            }
+
+
+            Validator(){
+                if(this.fname.length < 6){
+                   alert("Use 6 Characters in Username") 
+                }
+
+                else if(this.pass.length < 8){
+                    alert("Use 8 Characters in Password")
+                }
+
+                else{
+                    document.write("Login Successful !")
+                }
+            }
+        }
+        
+        function Itachi(){
+            let Fullname = document.Demon.Name.value;
+        let Password = document.Demon.pass.value;
+
+
+        let naruto = new Shisui(Fullname,Password);
+        naruto.Validator();
+        }
+        
+    </script>
+</body>
+</html>

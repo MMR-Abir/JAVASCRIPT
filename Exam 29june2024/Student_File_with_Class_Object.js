@@ -1,5 +1,5 @@
 class Naruto{
-    constractor (name,gender,area,subject,location){
+    constructor (name,gender,area,subject,location){
         this.fname = name;
         this.sex = gender;
         this.address = area;

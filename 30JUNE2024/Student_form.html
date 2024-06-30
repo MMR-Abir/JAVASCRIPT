@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trainee Data</title>
+</head>
+<body>
+    <form action="" name="Demon">
+        Name:
+        <input type="text" name="Full" placeholder="Enter Your Name"> <br>
+
+        Address:
+        <textarea name="Area" placeholder="Enter your area name"></textarea> <br>
+
+        Gender: 
+        <input type="radio" name="gender" value="Male">Male
+        <input type="radio" name="gender" value="Female">Female <br>
+
+        Coding Language: 
+        <input type="checkbox" name="POP" class="Titan" value="PHP">PHP
+        <input type="checkbox" name="POP" class="Titan" value="JAVASCRIPT">JAVASCRIPT
+        <input type="checkbox" name="POP" class="Titan" value="PYTHON">PYTHON
+        <input type="checkbox" name="POP" class="Titan" value="ORACLE">ORACLE <br>
+
+        Location: 
+        <select name="Places">
+            <option>Select One</option>
+            <option>Banani</option>
+            <option>Dhanmondi</option>
+            <option>Mirpur</option>
+        </select> <br>
+
+        <button type="button" name="submit" onclick="Itachi()">Click Here</button>
+        
+
+    </form>
+
+<script>
+    class Shisui{
+        constructor(name,area,sex,language,location){
+            this.name = name;
+            this.area = area;
+            this.sex = sex;
+            this.language = language;
+            this.location = location;
+
+        }
+
+
+
+        Danzo(){
+            let output ="<h1>  Traniee Information </h1>"
+            output+= "Name: " + this.name + "<br>" ;
+            output+= "Address: " + this.area + "<br>" ;
+            output+= "Gender: " + this.sex + "<br>" ;
+            output+= "Language: " + this.language + "<br>" ;
+            output+= "Location: " + this.location + "<br>" ;
+
+            let lol = window.open("","","width=700, height=700");
+            lol.document.write(output);
+        }
+    }
+
+
+    function Itachi(){
+        let name =document.Demon.Full.value;
+        let address =document.Demon.Area.value;
+        let sex =document.Demon.gender.value;
+        let language =document.getElementsByClassName("Titan");
+        let native ="";
+        for(i = 0 ; i < language.length ; i++){
+            if(language[i].checked){
+                native+= language[i].value + "," ;
+            }
+        }
+
+        let location =document.Demon.Places.value;
+
+
+
+
+
+        let Shikamaru = new Shisui(name,address,sex,native,location);
+        Shikamaru.Danzo();
+
+    }
+</script>
+
+
+
+
+
+</body>
+</html>
