@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cheaking mail</title>
+</head>
+<body>
+    <form action="" name="Fe">
+
+        Email: 
+        <input type="email" name="mail" placeholder="Enter mail"> <br>
+
+        <button type="button" name="Submit" onclick="Itachi()">SUBMIT</button>
+
+
+    </form>
+
+    <script>
+        class Mail{
+            constructor(mail){
+                this.gmail = mail;
+            }
+
+            validate(){
+
+              let  rule = /[a-z0-9]+@[a-z]+\.[a-z]/;
+                if(this.gmail.search(rule) == -1) {
+                    alert("Invalid Email") ;
+                }
+
+                else{
+                    alert("Valid Email")
+                }
+            }
+        }
+
+
+        function Itachi(){
+            let fmail = document.Fe.mail.value;
+
+            let nw = new Mail(fmail) ;
+            nw.validate() ;
+        }
+    </script>
+</body>
+</html>

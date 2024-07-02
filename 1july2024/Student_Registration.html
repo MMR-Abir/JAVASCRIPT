@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Ragistration</title>
+</head>
+<body>
+    <form action="" name="Demon">
+
+        Name :
+        <input type="text" name="Name" placeholder="Write your Name"> <br>
+
+        Email: 
+        <input type="email" name="mail" placeholder="Enter Your Email"> <br>
+
+        Phone:
+        <input type="number" name="Phone" placeholder="Submit your Number"> <br>
+
+        Password: 
+        <input type="password" name="word" placeholder="pASSWORD"> <br>
+
+        Repeat Password: 
+        <input type="password" name="repass" placeholder="Re -type Your password"> <br>
+
+        <button type="button" name="Submit" onclick="Itachi()">SUBMIT</button>
+    </form>
+
+
+    <script>
+        class Naruto{
+           constructor(name,mail,phone,password,repassword){
+            this.fname = name;
+            this.fmail = mail;
+            this.fphone = phone;
+            this.fpassword = password;
+            this.frepassword = repassword;
+           }
+
+           Danzo(){
+          let  rule = /[a-z0-9]+@[a-z]+\.[a-z]/;
+    if(this.fname == ""){
+        alert("Name Can't be Blank")
+    }
+
+    else if(this.fmail == ""){
+        
+        alert("Email Can't be Blank")
+    }
+
+    else if(this.fmail.search(rule) == -1){
+        alert("Invalid Email")
+    }
+
+    else if(this.fphone == ""){
+        alert("Phone Number Can't be Blank")
+    }
+
+    else if(this.fpassword == ""){
+        alert("Password Can't be Blank")
+    }
+    
+    else if(this.frepassword == "" ){
+        alert("Confirm Password Can't be Blank")
+    }
+
+
+
+    else if(this.frepassword != this.fpassword ){
+        alert("Password Mismatched")
+    }
+
+    else(
+        document.write("Congratulations! Fokkinni !")
+    )
+}
+           }
+        
+
+
+
+        function Itachi(){
+           let dd = document.Demon.Name.value ;
+           let cd = document.Demon.mail.value ;
+           let ed = document.Demon.Phone.value ;
+           let dO = document.Demon.word.value ;
+           let did = document.Demon.repass.value ;
+
+
+           let NW = new Naruto(dd,cd,ed,dO,did) ;
+           NW.Danzo();
+        }
+    </script>
+</body>
+</html>
+
+
+
+
+    

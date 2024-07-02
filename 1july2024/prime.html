@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prime Number</title>
+</head>
+<body>
+    <!-- <form action="" name="Demon">
+        Prime Number:
+        <input type="number" name="Num" placeholder="Enter the Number"> <br> -->
+
+        <!-- <button onclick="Prime()">Click Here</button> -->
+    <!-- </form> -->
+
+
+    <script>
+        function Prime(){
+            // let a = document.Demon.Num.value;
+            let a = prompt("Enter the number");
+           
+            if(a == 0){
+                 return a + " is Error" ; 
+            }
+
+            else if(a == 1){
+                return a +" is not a prime Number" ;
+            }
+
+            else if(a == 2){
+                return a +" is a prime Number" ;
+            }
+
+            else{
+                for(i = 2 ; i < a ; i++){
+                    if( a % i == 0){
+                        return a + " is not a prime Number" ;
+                    }
+                    
+                }
+            return a + " is a prime Number" ;
+            
+            }
+
+        }
+
+        document.write(Prime()) ;
+    </script>
+</body>
+</html>

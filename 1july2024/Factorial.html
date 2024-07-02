@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Factorial</title>
+</head>
+<body>
+    <form action="" name="Demon">
+        Factorial:
+        <input type="number" name="Fact" placeholder="eNTER THE nUMBER">
+        <button type="button" name="submit" onclick="Factc()">Click Here</button>
+    </form>
+
+    <script>
+        function Factc(){
+            let f = document.Demon.Fact.value;
+           let fact = 1 ;
+            for(i = 1 ; i <= f ; i++ ){
+                fact = fact * i ;
+            }
+            document.getElementById("show") .innerHTML= "The Factorial of " + f + " is " + fact ;
+        }
+
+ 
+    </script>
+    
+
+    <div id="show"></div>
+</body>
+</html>

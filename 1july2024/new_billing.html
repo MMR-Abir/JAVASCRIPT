@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Billing Information</title>
+</head>
+<body>
+    <form action="" name="Slayer">
+
+        First Name :
+        <input type="text" name="fname" placeholder="write your First name"> <br>
+
+        Last Name :
+        <input type="text" name="lname" placeholder="write your First name"> <br>
+
+        Gender : 
+        <input type="radio" name="gender" value="Male"> Male
+        <input type="radio" name="gender" value="Female">Female  <br>
+
+        Address: 
+        <textarea name="Areas" placeholder="Write Area"></textarea> <br>
+
+        Subjects : 
+        <input type="checkbox" class="Titan" value="English">English
+        <input type="checkbox" class="Titan" value="Bangla">Bangla
+        <input type="checkbox" class="Titan" value="Spanish">Spanish
+        <input type="checkbox" class="Titan" value="French">French  <br>
+
+
+        Location :
+        <select name="Locate">
+            <option>Select One</option>
+            <option>Dhaka</option>
+            <option>Cumilla</option>
+            <option>Sylhet</option>
+        </select>  <br>
+
+        ZIP Code :
+
+        <input type="number" name="code" placeholder="Enter Zip Code"> <br>
+
+        <button type="button" name="submit" onclick="Shisui()">Click Here</button>
+
+    </form>
+
+
+    <script>
+        class Windbreaker{
+            constructor (fname,lname,gender,Address,subject,location,zip){
+                this.f =fname;
+                this.l =lname;
+                this.g =gender;
+                this.a =Address;
+                this.s =subject;
+                this.lo =location;
+                this.c =zip;
+
+            }
+
+            Danz0(){
+                let output = "" ;
+                output+= "First-Name :" + this.f + "<br>" ;
+                output+= "Last-Name :" + this.l + "<br>" ;
+                output+= "Gender :" + this.g + "<br>" ;
+                output+= "Address :" + this.a + "<br>" ;
+                output+= "Subject :" + this.s + "<br>" ;
+                output+= "Location :" + this.lo + "<br>" ;
+                output+= "Zip-Code :" + this.c + "<br>" ;
+
+                let nw = document.open("","","width=500,height=500") ;
+                nw.document.write(output) ;
+            }
+        }
+
+        function Shisui(){
+            let a = document.Slayer.fname.value ;
+            let b = document.Slayer.lname.value ;
+            let c = document.Slayer.gender.value ;
+            let d = document.Slayer.Areas.value ;
+            let e = document.getElementsByClassName("Titan") ;
+            let f = "";
+                for(i = 0 ; i < e.length ; i++){
+                    if(e[i].checked){
+                        f+= e[i].value + "," ;
+                    }
+                }
+            let g = document.Slayer.Locate.value ;
+            let h = document.Slayer.code.value ;
+
+            let saske = new Windbreaker(a,b,c,d,f,g,h);
+            saske.Danz0();
+        }
+    </script>
+</body>
+</html>
